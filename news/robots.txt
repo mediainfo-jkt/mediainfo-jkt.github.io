@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Beritahu lokasi sitemap kamu
-Sitemap: https://mediainfo-jkt.github.io/sitemap.xml
+Sitemap: https://mediainfo-jkt.github.io/news/sitemap.xml
