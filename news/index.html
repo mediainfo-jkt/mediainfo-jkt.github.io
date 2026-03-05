@@ -91,6 +91,64 @@
             .main-img { margin: 0 -25px 25px -25px; }
             .article-content { font-size: 19px; }
         }
+    .join-popup {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        background: var(--bg);
+        border-top: 5px solid var(--primary);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 9999;
+        padding: 20px;
+        border-radius: 4px;
+        display: none; /* Sembunyi secara default */
+        font-family: var(--font-sans);
+    }
+
+    .join-popup h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: var(--secondary);
+    }
+
+    .join-popup p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .btn-join {
+        background: var(--primary);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+        border-radius: 4px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+    }
+
+    .close-popup {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        color: #aaa;
+    }
+
+    /* Penyesuaian untuk Versi Mobile */
+    @media (max-width: 600px) {
+        .join-popup {
+            width: 90%;
+            left: 5%;
+            right: 5%;
+            bottom: 15px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -165,6 +223,24 @@
         </div>
     </aside>
 </div>
+    <div id="joinPopup" class="join-popup">
+    <span class="close-popup" onclick="closePopup()">&times;</span>
+    <a href="https://linkku.my/alexavegas" class="btn-join">GABUNG SEKARANG</a>
+</div>
+
+<script>
+    // Fungsi untuk memunculkan pop-up setelah 2 detik
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('joinPopup').style.display = 'block';
+        }, 2000);
+    };
+
+    // Fungsi untuk menutup pop-up
+    function closePopup() {
+        document.getElementById('joinPopup').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
